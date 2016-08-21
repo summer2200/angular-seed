@@ -1,0 +1,24 @@
+<div ng-bind-template="Google Phone Gallery: {{query}}"></div>
+<img src="pics/lol.bmp" style="height: 150px" />
+<div>
+  search:
+  <input ng-model="query" />
+</div>
+
+Sort By
+<select ng-model="orderOption">
+	<option value="name">Name</option>
+	<option value="date">Publish Date</option>
+</select>
+<label>Equality
+  <input type="checkbox" ng-model="strict">
+</label>{{strict}}<code>{{strict}}</code>
+<div class="phone-list" ng-controller="picCtrl">
+  <ul ng-repeat="phone in phones | filter: query:strict | orderBy: orderOption">
+    <li>
+      <span>{{phone.name}}</span>
+      <p>{{phone.introduction}}</p>
+      <p>{{phone.date}}</p>
+    </li>
+  </ul>
+</div>
