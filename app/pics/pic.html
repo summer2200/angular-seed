@@ -1,5 +1,5 @@
 <div ng-bind-template="Google Phone Gallery: {{query}}"></div>
-<img src="pics/lol.bmp" style="height: 150px" />
+<!-- <img src="pics/lol.bmp" style="height: 150px" /> -->
 <div>
   search:
   <input ng-model="query" />
@@ -14,11 +14,12 @@ Sort By
   <input type="checkbox" ng-model="strict">
 </label>{{strict}}<code>{{strict}}</code>
 <div class="phone-list" ng-controller="picCtrl">
-  <ul ng-repeat="phone in phones | filter: query:strict | orderBy: orderOption">
+  <ul ng-repeat="phone in phones | filter: query | orderBy: orderOption">
     <li>
-      <span>{{phone.name}}</span>
-      <p>{{phone.introduction}}</p>
-      <p>{{phone.date}}</p>
+    <a href="#!/phones/{{phone.age}}"><img ng-src="{{phone.imageUrl}}"></a>
+      <a>{{phone.name}}</a>
+    <!--   <p>{{phone.snippet}}</p>
+      <p>{{phone.carrier}}</p> -->
     </li>
   </ul>
 </div>
