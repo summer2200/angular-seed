@@ -7,7 +7,8 @@ angular.module('myApp', [
   'myApp.view2',
   'myApp.pic',
   'myApp.version',
-  "myApp.phoneDetail"
+  "myApp.phoneDetail",
+  "phonecatFilters"
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');

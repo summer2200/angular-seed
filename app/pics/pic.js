@@ -3,7 +3,7 @@
 angular.module("myApp.pic", ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/pic', {
+  $routeProvider.when('/', {
     templateUrl: 'pics/pic.html',
     controller: 'picCtrl'
   });

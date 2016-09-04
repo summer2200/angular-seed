@@ -16,7 +16,7 @@ Sort By
 <div class="phone-list" ng-controller="picCtrl">
   <ul ng-repeat="phone in phones | filter: query | orderBy: orderOption">
     <li>
-    <a href="#!/phones/{{phone.age}}"><img ng-src="{{phone.imageUrl}}"></a>
+    <a href="#!/phones/{{phone.id}}"><img ng-src="{{phone.imageUrl}}"></a>
       <a>{{phone.name}}</a>
     <!--   <p>{{phone.snippet}}</p>
       <p>{{phone.carrier}}</p> -->
